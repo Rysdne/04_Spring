@@ -1,0 +1,9 @@
+package com.example.demo;
+
+public class MemberEntity {
+
+	private int idx;
+	private String id;
+	private String password;
+	
+}

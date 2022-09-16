@@ -1,0 +1,22 @@
+도서구매
+1. 테이블 구성
+book(idx, title, content, author, price, bookimg, regdate)
+number varchar2 varchar2 varchar2 number varchar2 date
+
+2. SQL 구문 정리
+create table book(idx number(5) primary key, title varchar2(20), content varchar2(20), author varchar2(10), price number, bookimg varchar2(25), regdate date);
+
+
+create sequence book_idx_seq increment by 1 start with 10001;
+
+insert into book values(10001, '그 많던 싱아는 누가 다 먹었을까', '설명', 'rysdne', 20000, '10001.png', '2022-08-26');
+
+select * from book where idx=10001;
+
+update book set title='그 많던 싱아는 누가 다 먹었을까', content='설명', author='rysdne', price=20000, bookimg='10001.png', regdate='2022-08-26');
+
+delete from book where idx=10001;
+
+
+3. JSP 입력
+

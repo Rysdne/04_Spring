@@ -1,0 +1,22 @@
+package com.example.demo;
+
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+// Serializable : 데이터 직렬화
+public class MemberEntity implements Serializable{
+
+
+	private int idx;
+	private String id;
+	private String password;
+	
+}

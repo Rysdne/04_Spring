@@ -1,0 +1,31 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessagePreparator;
+
+@SpringBootApplication
+public class JavaemailApplication implements CommandLineRunner{
+
+	@Autowired
+	JavaMailSender mail;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(JavaemailApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		final MimeMessagePreparator p = new MimeMessagePreparator();
+		
+		public void prepare(MimeMessage mimeMessage) {
+			
+		}
+		
+	}
+	
+
+}

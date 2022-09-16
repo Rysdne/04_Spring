@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberService {
+
+	@Autowired
+	MemberRepository repo;
+	
+	public List<MemberEntity> findAll() {
+		
+		List<MemberEntity> members = new ArrayList();
+		repo.findAll().forEach(e->members.add(e));
+		
+		return members; 
+	}
+	
+}

@@ -1,0 +1,44 @@
+package com.example.demo;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HibernateApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HibernateApplication.class, args);
+
+		// 1) 등록작업 : hibernate.cfg.xml
+		StandardServiceRegistry reg = new StandardServiceRegistryBuilder()
+				.configure("com/examble/demo/hibernate.cfg.xml").build();
+
+		// 2) Metadata : 목적에 맞게 구조화시킨 데이터(sessionFactory에 정보 제공)
+		Metadata metadata = new MetadataSources(reg).getMetadataBuilder().build();
+
+		SessionFactory sf = metadata.getSessionFactoryBuilder().build();
+
+		// 3) 세션연결작업
+		Session session = sf.openSession();
+
+		// 4) 트랜잭션작업
+		session.beginTransaction();
+
+		// 5) SQL 사용 save, load, update, delete
+		MemberEntity m = new MemberEntity();
+		m.setId("admin");
+		m.setPassword("1111");
+		session.save(m);
+		session.getTransaction().commit();
+		
+		SessionFactiry.close()
+		
+	}
+
+}

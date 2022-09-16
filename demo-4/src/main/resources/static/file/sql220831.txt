@@ -1,0 +1,8 @@
+select rownum r, t.* from
+(select reply.* from reply where book_idx=4 order by idx desc) t
+where r between 1 and 5;
+
+select * from
+(select reply.* from reply
+where book_idx=4 order by idx desc) t)
+where r between 6 and 10;

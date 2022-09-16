@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;jpa3/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original project: &apos;jpa2&apos;&#x0D;&#x0A;- Destination element: &apos;jpa3/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.example.demo.MemberRepository.java&#x0D;&#x0A;     com.example.demo.MemberEntity.java" description="Copy compilation units" destination="=jpa3/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo{MemberRepository.java" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo{MemberEntity.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1663218871280" units="2" version="1.0"/>
+</session>
